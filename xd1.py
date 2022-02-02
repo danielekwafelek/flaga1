@@ -16,7 +16,6 @@ for l in plik_nginxa_template:
 with open("/etc/nginx/sites-available/{}".format(domena), "w") as file1:
     file1.write(plik_nginxa)
 
-os.system('sudo ln -s /etc/nginx/sites-available/{} /etc/nginx/sites-enabled/'.format(domena))
 
 plik_gunicorn = open('flaga.service').read()
 with open('/etc/systemd/system/flaga.service', "w") as f:
