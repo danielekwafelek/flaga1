@@ -17,8 +17,8 @@ with open("/etc/nginx/sites-available/{}".format(domena), "w") as file1:
     file1.write(plik_nginxa)
 
 
-plik_gunicorn = open('flaga1.service').read()
-with open('/etc/systemd/system/flaga1.service', "w") as f:
+plik_gunicorn = open('flaga.service').read()
+with open('/etc/systemd/system/flaga.service', "w") as f:
 	f.write(plik_gunicorn)
 		
-os.system('sudo systemctl start flaga1.service')
+os.system('sudo systemctl start flaga.service')
